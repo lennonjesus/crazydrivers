@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Crazy Drivers</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<section id="head">
+
+	<section id="user">
+		<% if user_signed_in? %>
+			<nav id="nav_user">
+				<ul>
+                    <li><%= link_to "Corridas", races_path %></li>
+                    <li><%= link_to "Pilotos", drivers_path %></li>
+                    <li><%= link_to "Melhor volta", best_laps_path %></li>
+                    <li><%= link_to "Posições", positions_path %></li>
+
+                    <span>|</span>
+					<span><%= current_user.email %></span>
+					<li><%= link_to "Settings", services_path %>
+					<li><%= link_to "Sign out", signout_services_path %></li>
+				</ul>
+			</nav>
+		<% else %>
+			<nav id="nav_user">
+				<ul>
+					<span>Login:</span>
+					<li><%= link_to "Facebook", "/auth/facebook" %></li>
+					<li><%= link_to "Google", "/auth/google" %></li>
+					<li><%= link_to "Yahoo", "/auth/yahoo" %>
+					<li><%= link_to "MyOpenID", "/auth/myopenid" %>
+					<li><%= link_to "Outro", signin_services_path %>
+				</ul>
+			</nav>
+		<% end %>
+	</section>
+
+	<h1>The Crazy Drivers <sup>2011</sup></h1>
+</section>
+
+<section id="body">
+	<section id="flash">
+		<% flash.each do |key, value| %>
+			<div class="flash <%= key %> round"><%= value %></div>
+		<% end %>
+	</section>
+	<%= yield %>
+</section>
+
+</body>
+</html>

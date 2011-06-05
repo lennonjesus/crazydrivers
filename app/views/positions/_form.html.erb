@@ -1,0 +1,25 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :race %><br />
+    <%= select_tag "race[race_id]", options_from_collection_for_select(Race.find(:all), 'id','date') %>
+
+  <%= f.label :race %><br />
+    <%= select_tag "driver[driver_id]", options_from_collection_for_select(Driver.find(:all), 'id','name') %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

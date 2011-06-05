@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Race:</b>
+  <%= @best_lap.race %>
+</p>
+
+<p>
+  <b>Driver:</b>
+  <%= @best_lap.driver %>
+</p>
+
+
+<%= link_to 'Edit', edit_best_lap_path(@best_lap) %> |
+<%= link_to 'Back', best_laps_path %>

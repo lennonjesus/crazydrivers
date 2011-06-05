@@ -1,0 +1,25 @@
+<%= form_for(@best_lap) do |f| %>
+  <% if @best_lap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@best_lap.errors.count, "error") %> prohibited this best_lap from being saved:</h2>
+
+      <ul>
+      <% @best_lap.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :race %><br />
+    <%= f.text_field :race %>
+  </div>
+  <div class="field">
+    <%= f.label :driver %><br />
+    <%= f.text_field :driver %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
