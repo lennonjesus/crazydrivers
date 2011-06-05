@@ -1914,3 +1914,62 @@ Started GET "/" for 127.0.0.1 at Sun Jun 05 18:41:27 -0300 2011
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
 Rendered users/index.html.erb within layouts/application (27.4ms)
 Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 19:14:52 -0300 2011
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (550.5ms)
+Completed   in 558ms
+
+ActionView::Template::Error (undefined local variable or method `service' for #<#<Class:0xb6c3a530>:0xb6c393b0>):
+    1: This page is accessible by all users! The following link is for authenticated users only: <%= link_to "click here", test_users_path %>
+    2: 
+    3: 
+    4: <%= service.uname %><br />
+    5: <%= service.uid %><br />
+    6: <%= service.uemail %><br />
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___539068313__614349998_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (358.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (447.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 19:14:53 -0300 2011
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (430.4ms)
+Completed   in 438ms
+
+ActionView::Template::Error (undefined local variable or method `service' for #<#<Class:0xb6eb70d8>:0xb6eb32bc>):
+    1: This page is accessible by all users! The following link is for authenticated users only: <%= link_to "click here", test_users_path %>
+    2: 
+    3: 
+    4: <%= service.uname %><br />
+    5: <%= service.uid %><br />
+    6: <%= service.uemail %><br />
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___539068313__613055718_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (357.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (444.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 19:15:13 -0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 19:15:22 -0300 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 19:15:31 -0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.3ms)
