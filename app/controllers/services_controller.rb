@@ -13,6 +13,7 @@ class ServicesController < ApplicationController
     @service = current_user.services.find(params[:id])
     
     if session[:service_id] == @service.id
+      @service.destroy
       flash[:error] = 'Voce já efetuou login com esta conta!'
     else
       @service.destroy
