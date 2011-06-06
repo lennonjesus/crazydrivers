@@ -39,16 +39,16 @@ OmniauthDemo::Application.configure do
     provider :github, '73e3fe5bacaf46bb79d2', '837fd556428b5a536f0fb67cce27cfb97ccb7dad'
     
     # generic openid
-    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'openid'
+    provider :openid, OpenID::Store::Filesystem.new('/tmp'), :name => 'openid'
     
     # dedicated openid
-    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
-    # provider :google_apps, OpenID::Store::Filesystem.new('./tmp'), :name => 'google_apps'
+    provider :openid, OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+    # provider :google_apps, OpenID::Store::Filesystem.new('/tmp'), :name => 'google_apps'
     # /auth/google_apps; you can bypass the prompt for the domain with /auth/google_apps?domain=somedomain.com
     
-    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'yahoo', :identifier => 'yahoo.com' 
-    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'aol', :identifier => 'openid.aol.com'
-    provider :openid, OpenID::Store::Filesystem.new('./tmp'), :name => 'myopenid', :identifier => 'myopenid.com'
+    provider :openid, OpenID::Store::Filesystem.new('/tmp'), :name => 'yahoo', :identifier => 'yahoo.com' 
+    provider :openid, OpenID::Store::Filesystem.new('/tmp'), :name => 'aol', :identifier => 'openid.aol.com'
+    provider :openid, OpenID::Store::Filesystem.new('/tmp'), :name => 'myopenid', :identifier => 'myopenid.com'
     
     # Sign-up urls for Facebook, Twitter, and Github
     # https://developers.facebook.com/setup

@@ -1973,3 +1973,296 @@ Started GET "/" for 127.0.0.1 at Sun Jun 05 19:15:31 -0300 2011
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
 Rendered users/index.html.erb within layouts/application (28.7ms)
 Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/services" for 127.0.0.1 at Sun Jun 05 22:28:38 -0300 2011
+  Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mService Load (0.6ms)[0m  SELECT "services".* FROM "services" WHERE ("services".user_id = 1) ORDER BY provider asc
+Rendered services/_services_list.html.erb (4.8ms)
+Rendered services/index.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 173ms (Views: 112.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/services" for 127.0.0.1 at Sun Jun 05 22:29:27 -0300 2011
+  Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mService Load (0.4ms)[0m  SELECT "services".* FROM "services" WHERE ("services".user_id = 1) ORDER BY provider asc
+Rendered services/_services_list.html.erb (4.4ms)
+Rendered services/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 63ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/services/signout" for 127.0.0.1 at Sun Jun 05 22:29:33 -0300 2011
+  Processing by ServicesController#signout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 22:29:33 -0300 2011
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 104ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/u" for 127.0.0.1 at Sun Jun 05 22:30:46 -0300 2011
+
+ActionController::RoutingError (No route matches "/u"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/user" for 127.0.0.1 at Sun Jun 05 22:30:46 -0300 2011
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun Jun 05 22:30:47 -0300 2011
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/a" for 127.0.0.1 at Sun Jun 05 22:30:48 -0300 2011
+
+ActionController::RoutingError (No route matches "/users/a"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:30:49 -0300 2011
+
+ActionController::RoutingError (No route matches "/users/admin"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:32:00 -0300 2011
+  Processing by UsersController#admin as HTML
+Redirected to http://localhost:3000/services/signin
+Completed 302 Found in 1ms
+
+
+Started GET "/services/signin" for 127.0.0.1 at Sun Jun 05 22:32:00 -0300 2011
+  Processing by ServicesController#signin as HTML
+Rendered services/_services_list.html.erb (4.5ms)
+Rendered services/signin.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google" for 127.0.0.1 at Sun Jun 05 22:32:07 -0300 2011
+
+RuntimeError (cannot generate tempfile `./tmp/temp/tmp20110605-8742-phcm66-9'):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (172.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (188.0ms)
+
+
+Started GET "/auth/" for 127.0.0.1 at Sun Jun 05 22:32:25 -0300 2011
+
+ActionController::RoutingError (No route matches "/auth"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 22:32:25 -0300 2011
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google" for 127.0.0.1 at Sun Jun 05 22:32:28 -0300 2011
+
+RuntimeError (cannot generate tempfile `./tmp/temp/tmp20110605-8742-1xxvu67-9'):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (175.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (184.9ms)
+
+
+Started GET "/auth/google" for 127.0.0.1 at Sun Jun 05 22:33:27 -0300 2011
+
+
+Started GET "/auth/google/callback?_method=post&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2011-06-06T01%3A33%3A29ZUhwtPRzExk7cgw&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fgoogle%2Fcallback%3F_method%3Dpost&openid.assoc_handle=AOQobUdWyDxzZgD8AsFtxrMZvhhofa9l8ZePu6FYTaMUxYhli9QQY-yl&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.ext5%2Cext1.value.ext5%2Cext1.type.ext8%2Cext1.value.ext8%2Cext1.type.ext2%2Cext1.value.ext2&openid.sig=Z7lCTAkd%2F7y%2FQkJtM8Qe%2FIWn8Ok%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxH5YfZaMrzQYAn1LPAMtiX8WuQDpaBXI&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawmxH5YfZaMrzQYAn1LPAMtiX8WuQDpaBXI&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.ext5=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.ext5=Lennon&openid.ext1.type.ext8=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.ext8=lennon.jesus%40gmail.com&openid.ext1.type.ext2=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.ext2=Jesus" for 127.0.0.1 at Sun Jun 05 22:33:30 -0300 2011
+  Processing by ServicesController#create as HTML
+  Parameters: {"service"=>"google"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mService Load (0.4ms)[0m  SELECT "services".* FROM "services" WHERE "services"."uid" = 'https://www.google.com/accounts/o8/id?id=AItOawmxH5YfZaMrzQYAn1LPAMtiX8WuQDpaBXI' AND "services"."provider" = 'google' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms
+
+
+Started GET "/" for 127.0.0.1 at Sun Jun 05 22:33:30 -0300 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/index.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 121ms (Views: 119.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/u" for 127.0.0.1 at Sun Jun 05 22:33:36 -0300 2011
+
+ActionController::RoutingError (No route matches "/u"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/us" for 127.0.0.1 at Sun Jun 05 22:33:37 -0300 2011
+
+ActionController::RoutingError (No route matches "/us"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:33:37 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed   in 24ms
+
+ActionView::MissingTemplate (Missing template users/admin with {:locale=>[:en, :en], :formats=>[:html], :handlers=>[:rxml, :builder, :erb, :rjs, :rhtml]} in view paths "/home/lennonjesus/Desenvolvimento/ruby_home/crazydrivers/app/views"):
+  app/controllers/users_controller.rb:12:in `admin'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:34:39 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (9.2ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined method `date' for #<User:0xb6b9c704>):
+    10: 
+    11: <% @users.each do |user| %>
+    12:   <tr>
+    13:     <td><%= time_ago_in_words user.date %></td>
+    14:     <td><%= link_to 'Show', user %></td>
+    15:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    16:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  app/views/users/admin.html.erb:13:in `_app_views_users_admin_html_erb___166645492__614680078_0'
+  app/views/users/admin.html.erb:11:in `each'
+  app/views/users/admin.html.erb:11:in `_app_views_users_admin_html_erb___166645492__614680078_0'
+  app/controllers/users_controller.rb:12:in `admin'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (452.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (464.1ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:34:56 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (498.5ms)
+Completed   in 520ms
+
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0xb6dbda60>:0xb6dbc714>):
+    11: <% @users.each do |user| %>
+    12:   <tr>
+    13:     <td><%= user.name %></td>
+    14:     <td><%= link_to 'Show', user %></td>
+    15:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    16:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    17:   </tr>
+  app/views/users/admin.html.erb:14:in `_app_views_users_admin_html_erb___166645492__613558278_0'
+  app/views/users/admin.html.erb:11:in `each'
+  app/views/users/admin.html.erb:11:in `_app_views_users_admin_html_erb___166645492__613558278_0'
+  app/controllers/users_controller.rb:12:in `admin'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (344.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (428.7ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:36:03 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (436.9ms)
+Completed   in 460ms
+
+ActionView::Template::Error (undefined local variable or method `new_user_path' for #<#<Class:0xb6e348a4>:0xb6e2f084>):
+    18: 
+    19: <br />
+    20: 
+    21: <%= link_to 'New user', new_user_path %>
+  app/views/users/admin.html.erb:21:in `_app_views_users_admin_html_erb___166645492__613322668_0'
+  app/controllers/users_controller.rb:12:in `admin'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (349.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (434.1ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:36:13 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 37ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:36:28 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 35ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:36:48 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:37:04 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (97.3ms)
+Completed 200 OK in 118ms (Views: 103.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:37:29 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:38:02 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 134ms (Views: 119.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/admin" for 127.0.0.1 at Sun Jun 05 22:38:11 -0300 2011
+  Processing by UsersController#admin as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered users/admin.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 38ms (Views: 21.0ms | ActiveRecord: 1.1ms)

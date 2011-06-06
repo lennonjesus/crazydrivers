@@ -8,6 +8,8 @@ OmniauthDemo::Application.routes.draw do
 
   resources :races
 
+  match "users/admin" => "users#admin"
+
   # Omniauth pure
   match "/signin" => "services#signin"
   match "/signout" => "services#signout"

@@ -20,15 +20,15 @@
                     <li><%= link_to "Posições", positions_path %></li>
 
                     <span>|</span>
-					<span><%= current_user.email %></span>
-					<li><%= link_to "Settings", services_path %>
-					<li><%= link_to "Sign out", signout_services_path %></li>
+					<span><%= current_user.name %></span>
+					<li><%= link_to "Configurações", services_path %>
+					<li><%= link_to "Sair", signout_services_path %></li>
 				</ul>
 			</nav>
 		<% else %>
 			<nav id="nav_user">
 				<ul>
-					<span>Login:</span>
+					<span>Entrar:</span>
 					<li><%= link_to "Facebook", "/auth/facebook" %></li>
 					<li><%= link_to "Google", "/auth/google" %></li>
 					<li><%= link_to "Yahoo", "/auth/yahoo" %>
